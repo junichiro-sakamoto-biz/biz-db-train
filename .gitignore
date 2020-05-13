@@ -90,4 +90,4 @@ dbflute-intro.jar
 *.zip
 
 # Eclipse project
-./project
+/.project
