@@ -108,7 +108,7 @@
 	<diagram_walkers>
 		<table>
 			<physical_name>users</physical_name>
-			<logical_name>NEW_TABLE</logical_name>
+			<logical_name>ユーザー</logical_name>
 			<description>twitterのuserを保存します。</description>
 			<height>75</height>
 			<width>120</width>
@@ -136,31 +136,30 @@
 					<auto_increment>true</auto_increment>
 				</normal_column>
 				<normal_column>
-					<physical_name>uq_users_name</physical_name>
-					<logical_name>uq_users_name</logical_name>
+					<physical_name>name</physical_name>
+					<logical_name>アカウント名(ユニーク)</logical_name>
 					<type>varchar(n)</type>
 					<length>20</length>
 					<not_null>true</not_null>
-					<unique_key>true</unique_key>
 				</normal_column>
 				<normal_column>
-					<physical_name>uq_users_email</physical_name>
-					<logical_name>uq_users_email</logical_name>
+					<physical_name>email</physical_name>
+					<logical_name>メールアドレス</logical_name>
 					<type>varchar(n)</type>
 					<length>255</length>
 					<not_null>true</not_null>
-					<unique_key>true</unique_key>
+					<unique_key_name>UQ_users_email</unique_key_name>
 				</normal_column>
 				<normal_column>
 					<physical_name>password</physical_name>
-					<logical_name>password</logical_name>
+					<logical_name>パスワード</logical_name>
 					<type>varchar(n)</type>
 					<length>255</length>
 					<not_null>true</not_null>
 				</normal_column>
 				<normal_column>
 					<physical_name>display_name</physical_name>
-					<logical_name>display_name</logical_name>
+					<logical_name>表示名</logical_name>
 					<type>varchar(n)</type>
 					<length>20</length>
 					<not_null>true</not_null>
@@ -168,6 +167,24 @@
 				<column_group>AUDIT</column_group>
 			</columns>
 			<indexes>
+				<index>
+					<name>UQ_users_name</name>
+					<type>BTREE</type>
+					<columns>
+						<column>
+							<column_id>table.users.name</column_id>
+						</column>
+					</columns>
+				</index>
+				<index>
+					<name>UQ_users_email</name>
+					<type>BTREE</type>
+					<columns>
+						<column>
+							<column_id>table.users.email</column_id>
+						</column>
+					</columns>
+				</index>
 			</indexes>
 			<compound_unique_key_list>
 			</compound_unique_key_list>
@@ -199,13 +216,13 @@
 			<columns>
 				<normal_column>
 					<physical_name>CREATED_AT</physical_name>
-					<logical_name>created_at</logical_name>
+					<logical_name>作成した時のタイムスタンプ</logical_name>
 					<type>datetime</type>
 					<not_null>true</not_null>
 				</normal_column>
 				<normal_column>
 					<physical_name>UPDATED_AT</physical_name>
-					<logical_name>updated_at</logical_name>
+					<logical_name>最終更新時のタイムスタンプ</logical_name>
 					<type>datetime</type>
 					<not_null>true</not_null>
 				</normal_column>
