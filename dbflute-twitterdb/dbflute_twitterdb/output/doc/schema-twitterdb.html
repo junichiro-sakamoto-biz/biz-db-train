@@ -516,14 +516,152 @@ pre.spolicyviodisp {
 	<tbody id="table-list-body">
 	<tr>
 		<td class="rownumcell">1</td>
+		<td class="aliascell">ツイート</td>
+		<td class="namecell" data-name="TWEETS"><a href="#tweets" title="type=TABLE, primaryKey={ID}, nameLength=6, columnCount=5">TWEETS</a></td>
+		<td class="typecell">TABLE</td>
+		<td class="relcell"><a href="#users" title="FK_TWEETS_USERS">USERS</a></td>
+		<td class="relcell">&nbsp;</td>
+		<td class="commentcell TWEETS_comment"><pre>tweet本体</pre></td>
+		<td class="subcell">Tweets</td>
+		<td class="subcell">2020/05/13</td>
+	</tr>
+	<tr>
+		<td class="rownumcell">2</td>
 		<td class="aliascell">ユーザー</td>
 		<td class="namecell" data-name="USERS"><a href="#users" title="type=TABLE, primaryKey={ID}, nameLength=5, columnCount=7">USERS</a></td>
 		<td class="typecell">TABLE</td>
 		<td class="relcell">&nbsp;</td>
-		<td class="relcell">&nbsp;</td>
+		<td class="relcell"><a href="#tweets" title="FK_TWEETS_USERS">TWEETS</a></td>
 		<td class="commentcell USERS_comment"><pre>twitterのuserを保存します。</pre></td>
 		<td class="subcell">Users</td>
 		<td class="subcell">2020/05/13</td>
+	</tr>
+	</tbody>
+</table>
+
+<h2 id="tweets" title="type=TABLE, primaryKey={ID}, nameLength=6, columnCount=5">
+(ツイート)TWEETS
+&nbsp;<span class="tablefirstdatetitle">since 2020/05/13</span>
+</h2>
+<div class="tablecomment TWEETS_comment" data-name="TWEETS"><pre>tweet本体</pre></div>
+<input type="hidden" value="TWEETS">
+<table class="tablecontent">
+	<thead>
+	<tr>
+		<th class="rownumhead">No.</th>
+		<th>PK</th>
+		<th>ID</th>
+		<th>UQ</th>
+		<th>IX</th>
+		<th>Not<br />Null</th>
+		<th>Alias</th>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Size</th>
+		<th>ForeignTable</th>
+		<th>ReferrerTable</th>
+		<th>Classification</th>
+		<th>ColumnComment</th>
+		<th>PropertyName</th>
+		<th>JavaType</th>
+		<th>Since</th>
+	</tr>
+	</thead>
+	<tbody id="tweets-body">
+	<tr>
+		<td class="rownumcell">1</td>
+		<td class="flgcell" title="PRIMARY">o</td>
+		<td class="flgcell">o</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell">*</td>
+		<td class="aliascell">id</td>
+		<td class=" columnnamecell" id="tweets_id">ID</td>
+		<td class="typecell">BIGINT</td>
+		<td class="sizecell"> 19 </td>
+		<td class="relcell">&nbsp;&nbsp;</td>
+		<td class="relcell">&nbsp;</td>
+		<td class="relcell"> &nbsp;</td>
+		<td class="commentcell"><pre>&nbsp;</pre></td>
+		<td class="subcell">id</td>
+		<td class="subcell">Long</td>
+		<td class="subcell">first</td>
+	</tr>
+	<tr>
+		<td class="rownumcell">2</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell"> &nbsp;</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell">*</td>
+		<td class="aliascell">本文</td>
+		<td class=" columnnamecell" id="tweets_content">CONTENT</td>
+		<td class="typecell">VARCHAR</td>
+		<td class="sizecell"> 140 </td>
+		<td class="relcell">&nbsp;&nbsp;</td>
+		<td class="relcell">&nbsp;</td>
+		<td class="relcell"> &nbsp;</td>
+		<td class="commentcell"><pre>&nbsp;</pre></td>
+		<td class="subcell">content</td>
+		<td class="subcell">String</td>
+		<td class="subcell">first</td>
+	</tr>
+	<tr>
+		<td class="rownumcell">3</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell"> &nbsp;</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell">*</td>
+		<td class="aliascell comcolcell">作成した時のタイムスタンプ</td>
+		<td class="comcolcell columnnamecell" id="tweets_created_at">CREATED_AT</td>
+		<td class="typecell">DATETIME</td>
+		<td class="sizecell"> 19 </td>
+		<td class="relcell">&nbsp;&nbsp;</td>
+		<td class="relcell">&nbsp;</td>
+		<td class="relcell"> &nbsp;</td>
+		<td class="commentcell"><pre>&nbsp;</pre></td>
+		<td class="subcell">createdAt</td>
+		<td class="subcell">LocalDateTime</td>
+		<td class="subcell">first</td>
+	</tr>
+	<tr>
+		<td class="rownumcell">4</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell"> &nbsp;</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell">*</td>
+		<td class="aliascell comcolcell">最終更新時のタイムスタンプ</td>
+		<td class="comcolcell columnnamecell" id="tweets_updated_at">UPDATED_AT</td>
+		<td class="typecell">DATETIME</td>
+		<td class="sizecell"> 19 </td>
+		<td class="relcell">&nbsp;&nbsp;</td>
+		<td class="relcell">&nbsp;</td>
+		<td class="relcell"> &nbsp;</td>
+		<td class="commentcell"><pre>&nbsp;</pre></td>
+		<td class="subcell">updatedAt</td>
+		<td class="subcell">LocalDateTime</td>
+		<td class="subcell">first</td>
+	</tr>
+	<tr>
+		<td class="rownumcell">5</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell"> &nbsp;</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell" title="FK_TWEETS_USERS(USER_ID)">o</td>
+		<td class="flgcell">*</td>
+		<td class="aliascell">投稿主</td>
+		<td class=" columnnamecell" id="tweets_user_id">USER_ID</td>
+		<td class="typecell">BIGINT</td>
+		<td class="sizecell"> 19 </td>
+		<td class="relcell"><a href="#users" title="FK_TWEETS_USERS">USERS</a>&nbsp;</td>
+		<td class="relcell">&nbsp;</td>
+		<td class="relcell"> &nbsp;</td>
+		<td class="commentcell"><pre>user id</pre></td>
+		<td class="subcell">userId</td>
+		<td class="subcell">Long</td>
+		<td class="subcell">first</td>
 	</tr>
 	</tbody>
 </table>
@@ -566,10 +704,10 @@ pre.spolicyviodisp {
 		<td class="flgcell">*</td>
 		<td class="aliascell">id</td>
 		<td class=" columnnamecell" id="users_id">ID</td>
-		<td class="typecell">BIGINT UNSIGNED</td>
-		<td class="sizecell"> 20 </td>
+		<td class="typecell">BIGINT</td>
+		<td class="sizecell"> 19 </td>
 		<td class="relcell">&nbsp;&nbsp;</td>
-		<td class="relcell">&nbsp;</td>
+		<td class="relcell"><a href="#tweets" title="FK_TWEETS_USERS">TWEETS</a>&nbsp;</td>
 		<td class="relcell"> &nbsp;</td>
 		<td class="commentcell"><pre>user id</pre></td>
 		<td class="subcell">id</td>
@@ -583,7 +721,7 @@ pre.spolicyviodisp {
 		<td class="flgcell" title="UQ_USERS_NAME(NAME)">o</td>
 		<td class="flgcell">&nbsp;</td>
 		<td class="flgcell">*</td>
-		<td class="aliascell">アカウント名(ユニーク)</td>
+		<td class="aliascell">名前</td>
 		<td class=" columnnamecell" id="users_name">NAME</td>
 		<td class="typecell">VARCHAR</td>
 		<td class="sizecell"> 20 </td>
@@ -602,7 +740,7 @@ pre.spolicyviodisp {
 		<td class="flgcell" title="UQ_USERS_EMAIL(EMAIL)">o</td>
 		<td class="flgcell">&nbsp;</td>
 		<td class="flgcell">*</td>
-		<td class="aliascell">メールアドレス</td>
+		<td class="aliascell">mailaddress</td>
 		<td class=" columnnamecell" id="users_email">EMAIL</td>
 		<td class="typecell">VARCHAR</td>
 		<td class="sizecell"> 255 </td>
@@ -621,7 +759,7 @@ pre.spolicyviodisp {
 		<td class="flgcell">&nbsp;</td>
 		<td class="flgcell">&nbsp;</td>
 		<td class="flgcell">*</td>
-		<td class="aliascell">パスワード</td>
+		<td class="aliascell">password</td>
 		<td class=" columnnamecell" id="users_password">PASSWORD</td>
 		<td class="typecell">VARCHAR</td>
 		<td class="sizecell"> 255 </td>
@@ -640,7 +778,7 @@ pre.spolicyviodisp {
 		<td class="flgcell">&nbsp;</td>
 		<td class="flgcell">&nbsp;</td>
 		<td class="flgcell">*</td>
-		<td class="aliascell">表示名</td>
+		<td class="aliascell">display_name</td>
 		<td class=" columnnamecell" id="users_display_name">DISPLAY_NAME</td>
 		<td class="typecell">VARCHAR</td>
 		<td class="sizecell"> 20 </td>
@@ -1254,7 +1392,27 @@ function StoreClient() {
 		]
 	}
 	this.pickupStore = {
-		'USERS': {
+		'TWEETS': {
+			'databaseComment': 'tweet本体'
+			, 'columns': {
+				'ID': {
+					'databaseComment': ''
+				}
+				, 'CONTENT': {
+					'databaseComment': ''
+				}
+				, 'CREATED_AT': {
+					'databaseComment': ''
+				}
+				, 'UPDATED_AT': {
+					'databaseComment': ''
+				}
+				, 'USER_ID': {
+					'databaseComment': 'user&nbsp;id'
+				}
+			}
+		}
+		, 'USERS': {
 			'databaseComment': 'twitterのuserを保存します。'
 			, 'columns': {
 				'ID': {

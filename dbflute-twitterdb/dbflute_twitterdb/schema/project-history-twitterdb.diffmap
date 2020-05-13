@@ -1,4 +1,136 @@
 map:{
+    ; 2020/05/13 09:17:43 = map:{
+        ; diffDate = 2020/05/13 09:17:43
+        ; diffAuthor = root
+        ; tableDiff = map:{
+            ; TWEETS = map:{
+                ; tableName = TWEETS
+                ; diffType = CHANGE
+                ; uniqueKeyDiff = map:{
+                    ; USER_ID = map:{
+                        ; constraintName = USER_ID
+                        ; diffType = DELETE
+                    }
+                }
+                ; indexDiff = map:{
+                    ; FK_TWEETS_USERS = map:{
+                        ; constraintName = FK_TWEETS_USERS
+                        ; diffType = ADD
+                    }
+                }
+            }
+        }
+    }
+    ; 2020/05/13 09:13:04 = map:{
+        ; diffDate = 2020/05/13 09:13:04
+        ; diffAuthor = root
+        ; tableDiff = map:{
+            ; TWEETS = map:{
+                ; tableName = TWEETS
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; ID = map:{
+                        ; columnName = ID
+                        ; diffType = CHANGE
+                        ; autoIncrementDiff = map:{
+                            ; next = true
+                            ; previous = false
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ; 2020/05/13 08:55:31 = map:{
+        ; diffDate = 2020/05/13 08:55:31
+        ; diffAuthor = root
+        ; tableDiff = map:{
+            ; TWEETS = map:{
+                ; tableName = TWEETS
+                ; diffType = CHANGE
+                ; uniqueKeyDiff = map:{
+                    ; USER_ID = map:{
+                        ; constraintName = USER_ID
+                        ; diffType = ADD
+                    }
+                }
+                ; indexDiff = map:{
+                    ; FK_TWEETS_USERS = map:{
+                        ; constraintName = FK_TWEETS_USERS
+                        ; diffType = DELETE
+                    }
+                }
+            }
+        }
+    }
+    ; 2020/05/13 08:46:28 = map:{
+        ; diffDate = 2020/05/13 08:46:28
+        ; diffAuthor = root
+        ; tableDiff = map:{
+            ; TWEETS = map:{
+                ; tableName = TWEETS
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; ID = map:{
+                        ; columnName = ID
+                        ; diffType = CHANGE
+                        ; dbTypeDiff = map:{
+                            ; next = BIGINT
+                            ; previous = BIGINT UNSIGNED
+                        }
+                        ; columnSizeDiff = map:{
+                            ; next = 19
+                            ; previous = 20
+                        }
+                    }
+                    ; USER_ID = map:{
+                        ; columnName = USER_ID
+                        ; diffType = CHANGE
+                        ; dbTypeDiff = map:{
+                            ; next = BIGINT
+                            ; previous = BIGINT UNSIGNED
+                        }
+                        ; columnSizeDiff = map:{
+                            ; next = 19
+                            ; previous = 20
+                        }
+                    }
+                }
+            }
+            ; USERS = map:{
+                ; tableName = USERS
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; ID = map:{
+                        ; columnName = ID
+                        ; diffType = CHANGE
+                        ; dbTypeDiff = map:{
+                            ; next = BIGINT
+                            ; previous = BIGINT UNSIGNED
+                        }
+                        ; columnSizeDiff = map:{
+                            ; next = 19
+                            ; previous = 20
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ; 2020/05/13 08:40:47 = map:{
+        ; diffDate = 2020/05/13 08:40:47
+        ; tableCount = map:{
+            ; next = 2
+            ; previous = 1
+        }
+        ; diffAuthor = root
+        ; tableDiff = map:{
+            ; TWEETS = map:{
+                ; tableName = TWEETS
+                ; diffType = ADD
+            }
+        }
+    }
     ; 2020/05/13 08:14:38 = map:{
         ; diffDate = 2020/05/13 08:14:38
         ; diffAuthor = root
