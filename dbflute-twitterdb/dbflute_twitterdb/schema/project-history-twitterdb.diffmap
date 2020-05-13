@@ -1,4 +1,82 @@
 map:{
+    ; 2020/05/13 05:55:49 = map:{
+        ; diffDate = 2020/05/13 05:55:49
+        ; diffAuthor = root
+        ; tableDiff = map:{
+            ; USERS = map:{
+                ; tableName = USERS
+                ; diffType = ADD
+            }
+            ; USER = map:{
+                ; tableName = USER
+                ; diffType = DELETE
+            }
+        }
+    }
+    ; 2020/05/13 05:51:52 = map:{
+        ; diffDate = 2020/05/13 05:51:52
+        ; diffAuthor = root
+        ; tableDiff = map:{
+            ; USER = map:{
+                ; tableName = USER
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; UQ_EMAIL = map:{
+                        ; columnName = UQ_EMAIL
+                        ; diffType = ADD
+                    }
+                    ; EMAIL = map:{
+                        ; columnName = EMAIL
+                        ; diffType = DELETE
+                    }
+                }
+                ; uniqueKeyDiff = map:{
+                    ; UQ_EMAIL = map:{
+                        ; constraintName = UQ_EMAIL
+                        ; diffType = ADD
+                    }
+                    ; EMAIL = map:{
+                        ; constraintName = EMAIL
+                        ; diffType = DELETE
+                    }
+                }
+            }
+        }
+    }
+    ; 2020/05/13 05:47:07 = map:{
+        ; diffDate = 2020/05/13 05:47:07
+        ; diffAuthor = root
+        ; tableDiff = map:{
+            ; USER = map:{
+                ; tableName = USER
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; CREATED_AT = map:{
+                        ; columnName = CREATED_AT
+                        ; diffType = ADD
+                    }
+                    ; UPDATED_AT = map:{
+                        ; columnName = UPDATED_AT
+                        ; diffType = ADD
+                    }
+                }
+            }
+        }
+    }
+    ; 2020/05/13 05:29:16 = map:{
+        ; diffDate = 2020/05/13 05:29:16
+        ; diffAuthor = root
+        ; tableDiff = map:{
+            ; USER = map:{
+                ; tableName = USER
+                ; diffType = ADD
+            }
+            ; SAMPLE = map:{
+                ; tableName = SAMPLE
+                ; diffType = DELETE
+            }
+        }
+    }
     ; 2020/04/16 07:40:20 = map:{
         ; diffDate = 2020/04/16 07:40:20
         ; diffAuthor = root
