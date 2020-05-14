@@ -1,4 +1,44 @@
 map:{
+    ; 2020/05/14 02:47:40 = map:{
+        ; diffDate = 2020/05/14 02:47:40
+        ; diffAuthor = root
+        ; tableDiff = map:{
+            ; TWEETS = map:{
+                ; tableName = TWEETS
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; TWEETED_AT = map:{
+                        ; columnName = TWEETED_AT
+                        ; diffType = ADD
+                    }
+                }
+            }
+            ; USERS = map:{
+                ; tableName = USERS
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; MAILADDRESS = map:{
+                        ; columnName = MAILADDRESS
+                        ; diffType = ADD
+                    }
+                    ; EMAIL = map:{
+                        ; columnName = EMAIL
+                        ; diffType = DELETE
+                    }
+                }
+                ; uniqueKeyDiff = map:{
+                    ; UQ_USERS_EMAIL = map:{
+                        ; constraintName = UQ_USERS_EMAIL
+                        ; diffType = CHANGE
+                        ; columnDiff = map:{
+                            ; next = MAILADDRESS
+                            ; previous = EMAIL
+                        }
+                    }
+                }
+            }
+        }
+    }
     ; 2020/05/14 01:58:48 = map:{
         ; diffDate = 2020/05/14 01:58:48
         ; tableCount = map:{

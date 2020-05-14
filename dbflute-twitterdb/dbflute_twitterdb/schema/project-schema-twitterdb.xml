@@ -42,6 +42,9 @@
             name="USER_ID" required="true" size="19" type="BIGINT"/>
         <column comment="本文" dbType="VARCHAR" javaType="String"
             name="CONTENT" required="true" size="140" type="VARCHAR"/>
+        <column comment="ツイートされた時間 : ユーザーがツイートリクエストを作成したタイミング"
+            dbType="DATETIME" javaType="java.time.LocalDateTime"
+            name="TWEETED_AT" required="true" size="19" type="TIMESTAMP"/>
         <column comment="作成した時のタイムスタンプ" dbType="DATETIME"
             javaType="java.time.LocalDateTime" name="CREATED_AT"
             required="true" size="19" type="TIMESTAMP"/>
@@ -65,7 +68,7 @@
         <column comment="名前" dbType="VARCHAR" javaType="String"
             name="NAME" required="true" size="255" type="VARCHAR"/>
         <column comment="メールアドレス" dbType="VARCHAR" javaType="String"
-            name="EMAIL" required="true" size="255" type="VARCHAR"/>
+            name="MAILADDRESS" required="true" size="255" type="VARCHAR"/>
         <column comment="パスワード" dbType="VARCHAR" javaType="String"
             name="PASSWORD" required="true" size="255" type="VARCHAR"/>
         <column comment="表示名" dbType="VARCHAR" javaType="String"
@@ -77,7 +80,7 @@
             javaType="java.time.LocalDateTime" name="UPDATED_AT"
             required="true" size="19" type="TIMESTAMP"/>
         <unique name="UQ_USERS_EMAIL">
-            <unique-column name="EMAIL" position="1"/>
+            <unique-column name="MAILADDRESS" position="1"/>
         </unique>
         <unique name="UQ_USERS_NAME">
             <unique-column name="NAME" position="1"/>

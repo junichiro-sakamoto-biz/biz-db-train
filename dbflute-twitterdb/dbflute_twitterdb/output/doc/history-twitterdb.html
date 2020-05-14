@@ -213,6 +213,40 @@ dl.column-content dd span {
 <p class="sisterlink"><a href="./schema-twitterdb.html">to SchemaHTML</a></p>
 </div>
 
+<div class="section diffCode_20200514024740">
+	<h2>
+		<span class="titlediffno">diffNo. 17:</span> <span class="titlediffdatepart">2020/05/14</span> <span class="titledifftimepart">02:47:40</span>
+		<span class="titlediffauthor">by root</span>
+	</h2>
+	<pre class="diffcomment"></pre>
+
+	<h3>Change Table</h3>
+	<div class="table-content">
+		<h4><a href="./schema-twitterdb.html#tweets">TWEETS</a></h4>
+		<div class="change-table-content">
+			<h5>Add Column</h5>
+			<ul class="column-content">
+				<li>TWEETED_AT</li>
+			</ul>
+		</div>
+		<h4><a href="./schema-twitterdb.html#users">USERS</a></h4>
+		<div class="change-table-content">
+			<h5>Add Column</h5>
+			<ul class="column-content">
+				<li>MAILADDRESS</li>
+			</ul>
+			<h5>Delete Column</h5>
+			<ul class="column-content">
+				<li>EMAIL</li>
+			</ul>
+			<h5>Change UQ</h5>
+			<dl class="column-content">
+				<dt>UQ_USERS_EMAIL</dt>
+				<dd><span>Column</span>EMAIL&nbsp;-&gt;&nbsp;MAILADDRESS</dd>
+			</dl>
+		</div>
+	</div>
+</div>
 <div class="section diffCode_20200514015848">
 	<h2>
 		<span class="titlediffno">diffNo. 16:</span> <span class="titlediffdatepart">2020/05/14</span> <span class="titledifftimepart">01:58:48</span>
@@ -223,11 +257,11 @@ dl.column-content dd span {
 
 	<h3>Add Table</h3>
 	<ul class="table-content">
-		<li><a href="./schema-twitterdb.html#follows">FOLLOWS</a></li>
+		<li>FOLLOWS</li>
 	</ul>
 	<h3>Change Table</h3>
 	<div class="table-content">
-		<h4><a href="./schema-twitterdb.html#users">USERS</a></h4>
+		<h4>USERS</h4>
 		<div class="change-table-content">
 			<h5>Change Column</h5>
 			<dl class="column-content">
@@ -713,7 +747,11 @@ dl.column-content dd span {
             ]
         };
         this.pickupStore = {
-            '20200514015848' : {
+            '20200514024740' : {
+                'diffDate' : '2020/05/14 02:47:40',
+                'diffComment' : ''
+            }
+            , '20200514015848' : {
                 'diffDate' : '2020/05/14 01:58:48',
                 'diffComment' : ''
             }

@@ -528,7 +528,7 @@ pre.spolicyviodisp {
 	<tr>
 		<td class="rownumcell">2</td>
 		<td class="aliascell">ツイート</td>
-		<td class="namecell" data-name="TWEETS"><a href="#tweets" title="type=TABLE, primaryKey={ID}, nameLength=6, columnCount=5">TWEETS</a></td>
+		<td class="namecell" data-name="TWEETS"><a href="#tweets" title="type=TABLE, primaryKey={ID}, nameLength=6, columnCount=6">TWEETS</a></td>
 		<td class="typecell">TABLE</td>
 		<td class="relcell"><a href="#users" title="FK_TWEETS_USERS">USERS</a></td>
 		<td class="relcell">&nbsp;</td>
@@ -678,7 +678,7 @@ pre.spolicyviodisp {
 	</tbody>
 </table>
 
-<h2 id="tweets" title="type=TABLE, primaryKey={ID}, nameLength=6, columnCount=5">
+<h2 id="tweets" title="type=TABLE, primaryKey={ID}, nameLength=6, columnCount=6">
 (ツイート)TWEETS
 &nbsp;<span class="tablefirstdatetitle">since 2020/05/13</span>
 </h2>
@@ -771,6 +771,25 @@ pre.spolicyviodisp {
 		<td class="flgcell">&nbsp;</td>
 		<td class="flgcell">&nbsp;</td>
 		<td class="flgcell">*</td>
+		<td class="aliascell">ツイートされた時間</td>
+		<td class=" columnnamecell" id="tweets_tweeted_at">TWEETED_AT</td>
+		<td class="typecell">DATETIME</td>
+		<td class="sizecell"> 19 </td>
+		<td class="relcell">&nbsp;&nbsp;</td>
+		<td class="relcell">&nbsp;</td>
+		<td class="relcell"> &nbsp;</td>
+		<td class="commentcell"><pre>ユーザーがツイートリクエストを作成したタイミング</pre></td>
+		<td class="subcell">tweetedAt</td>
+		<td class="subcell">LocalDateTime</td>
+		<td class="subcell">2020/05/14</td>
+	</tr>
+	<tr>
+		<td class="rownumcell">5</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell"> &nbsp;</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell">&nbsp;</td>
+		<td class="flgcell">*</td>
 		<td class="aliascell comcolcell">作成した時のタイムスタンプ</td>
 		<td class="comcolcell columnnamecell" id="tweets_created_at">CREATED_AT</td>
 		<td class="typecell">DATETIME</td>
@@ -784,7 +803,7 @@ pre.spolicyviodisp {
 		<td class="subcell">first</td>
 	</tr>
 	<tr>
-		<td class="rownumcell">5</td>
+		<td class="rownumcell">6</td>
 		<td class="flgcell">&nbsp;</td>
 		<td class="flgcell"> &nbsp;</td>
 		<td class="flgcell">&nbsp;</td>
@@ -877,20 +896,20 @@ pre.spolicyviodisp {
 		<td class="rownumcell">3</td>
 		<td class="flgcell">&nbsp;</td>
 		<td class="flgcell"> &nbsp;</td>
-		<td class="flgcell" title="UQ_USERS_EMAIL(EMAIL)">o</td>
+		<td class="flgcell" title="UQ_USERS_EMAIL(MAILADDRESS)">o</td>
 		<td class="flgcell">&nbsp;</td>
 		<td class="flgcell">*</td>
 		<td class="aliascell">メールアドレス</td>
-		<td class=" columnnamecell" id="users_email">EMAIL</td>
+		<td class=" columnnamecell" id="users_mailaddress">MAILADDRESS</td>
 		<td class="typecell">VARCHAR</td>
 		<td class="sizecell"> 255 </td>
 		<td class="relcell">&nbsp;&nbsp;</td>
 		<td class="relcell">&nbsp;</td>
 		<td class="relcell"> &nbsp;</td>
 		<td class="commentcell"><pre>&nbsp;</pre></td>
-		<td class="subcell">email</td>
+		<td class="subcell">mailaddress</td>
 		<td class="subcell">String</td>
-		<td class="subcell">2020/05/13</td>
+		<td class="subcell">2020/05/14</td>
 	</tr>
 	<tr>
 		<td class="rownumcell">4</td>
@@ -1564,6 +1583,9 @@ function StoreClient() {
 				, 'CONTENT': {
 					'databaseComment': ''
 				}
+				, 'TWEETED_AT': {
+					'databaseComment': 'ユーザーがツイートリクエストを作成したタイミング'
+				}
 				, 'CREATED_AT': {
 					'databaseComment': ''
 				}
@@ -1581,7 +1603,7 @@ function StoreClient() {
 				, 'NAME': {
 					'databaseComment': ''
 				}
-				, 'EMAIL': {
+				, 'MAILADDRESS': {
 					'databaseComment': ''
 				}
 				, 'PASSWORD': {
