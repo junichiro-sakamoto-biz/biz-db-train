@@ -7,16 +7,19 @@
         <column autoIncrement="true" comment="id" dbType="BIGINT"
             javaType="Long" name="ID" pkName="PRIMARY" pkPosition="1"
             primaryKey="true" required="true" size="19" type="BIGINT"/>
+        <column comment="投稿主 : user id" dbType="BIGINT" javaType="Long"
+            name="USER_ID" required="true" size="19" type="BIGINT"/>
         <column comment="本文" dbType="VARCHAR" javaType="String"
             name="CONTENT" required="true" size="140" type="VARCHAR"/>
+        <column comment="ツイートされた時間 : ユーザーがツイートリクエストを作成したタイミング"
+            dbType="DATETIME" javaType="java.time.LocalDateTime"
+            name="TWEETED_AT" required="true" size="19" type="TIMESTAMP"/>
         <column comment="作成した時のタイムスタンプ" dbType="DATETIME"
             javaType="java.time.LocalDateTime" name="CREATED_AT"
             required="true" size="19" type="TIMESTAMP"/>
         <column comment="最終更新時のタイムスタンプ" dbType="DATETIME"
             javaType="java.time.LocalDateTime" name="UPDATED_AT"
             required="true" size="19" type="TIMESTAMP"/>
-        <column comment="投稿主 : user id" dbType="BIGINT" javaType="Long"
-            name="USER_ID" required="true" size="19" type="BIGINT"/>
         <foreign-key foreignSchema="twitterdb.$$NoNameSchema$$"
             foreignTable="USERS" name="FK_TWEETS_USERS">
             <reference foreign="ID" local="USER_ID"/>
@@ -31,14 +34,13 @@
             dbType="BIGINT" javaType="Long" name="ID" pkName="PRIMARY"
             pkPosition="1" primaryKey="true" required="true" size="19" type="BIGINT"/>
         <column comment="名前" dbType="VARCHAR" javaType="String"
-            name="NAME" required="true" size="20" type="VARCHAR"/>
-        <column comment="mailaddress" dbType="VARCHAR" javaType="String"
-            name="EMAIL" required="true" size="255" type="VARCHAR"/>
-        <column comment="password" dbType="VARCHAR" javaType="String"
+            name="NAME" required="true" size="255" type="VARCHAR"/>
+        <column comment="メールアドレス" dbType="VARCHAR" javaType="String"
+            name="MAILADDRESS" required="true" size="255" type="VARCHAR"/>
+        <column comment="パスワード" dbType="VARCHAR" javaType="String"
             name="PASSWORD" required="true" size="255" type="VARCHAR"/>
-        <column comment="display_name" dbType="VARCHAR"
-            javaType="String" name="DISPLAY_NAME" required="true"
-            size="20" type="VARCHAR"/>
+        <column comment="表示名" dbType="VARCHAR" javaType="String"
+            name="DISPLAY_NAME" required="true" size="20" type="VARCHAR"/>
         <column comment="作成した時のタイムスタンプ" dbType="DATETIME"
             javaType="java.time.LocalDateTime" name="CREATED_AT"
             required="true" size="19" type="TIMESTAMP"/>
@@ -46,7 +48,7 @@
             javaType="java.time.LocalDateTime" name="UPDATED_AT"
             required="true" size="19" type="TIMESTAMP"/>
         <unique name="UQ_USERS_EMAIL">
-            <unique-column name="EMAIL" position="1"/>
+            <unique-column name="MAILADDRESS" position="1"/>
         </unique>
         <unique name="UQ_USERS_NAME">
             <unique-column name="NAME" position="1"/>

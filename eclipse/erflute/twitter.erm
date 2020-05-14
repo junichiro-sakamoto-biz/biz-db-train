@@ -149,6 +149,13 @@
 					<auto_increment>true</auto_increment>
 				</normal_column>
 				<normal_column>
+					<physical_name>USER_ID</physical_name>
+					<logical_name>投稿主</logical_name>
+					<referred_column>table.USERS.ID</referred_column>
+					<relationship>FK_tweets_users</relationship>
+					<not_null>true</not_null>
+				</normal_column>
+				<normal_column>
 					<physical_name>CONTENT</physical_name>
 					<logical_name>本文</logical_name>
 					<type>varchar(n)</type>
@@ -156,10 +163,10 @@
 					<not_null>true</not_null>
 				</normal_column>
 				<normal_column>
-					<physical_name>USER_ID</physical_name>
-					<logical_name>投稿主</logical_name>
-					<referred_column>table.USERS.ID</referred_column>
-					<relationship>FK_tweets_users</relationship>
+					<physical_name>TWEETED_AT</physical_name>
+					<logical_name>ツイートされた時間</logical_name>
+					<type>datetime</type>
+					<description>ユーザーがツイートリクエストを作成したタイミング</description>
 					<not_null>true</not_null>
 				</normal_column>
 				<column_group>AUDIT</column_group>
@@ -207,7 +214,7 @@
 					<not_null>true</not_null>
 				</normal_column>
 				<normal_column>
-					<physical_name>EMAIL</physical_name>
+					<physical_name>MAILADDRESS</physical_name>
 					<logical_name>メールアドレス</logical_name>
 					<type>varchar(n)</type>
 					<length>255</length>
@@ -245,7 +252,7 @@
 					<type>BTREE</type>
 					<columns>
 						<column>
-							<column_id>table.USERS.EMAIL</column_id>
+							<column_id>table.USERS.MAILADDRESS</column_id>
 						</column>
 					</columns>
 				</index>
