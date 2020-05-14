@@ -87,6 +87,7 @@ where MEMBER_ID=1
         val results = """
 select * 
 from MEMBER
+where BIRTHDAY is null
         """.fetch()
 
         // Assert:
