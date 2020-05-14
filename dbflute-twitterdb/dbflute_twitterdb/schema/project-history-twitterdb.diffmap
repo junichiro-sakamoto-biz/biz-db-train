@@ -1,4 +1,32 @@
 map:{
+    ; 2020/05/14 01:58:48 = map:{
+        ; diffDate = 2020/05/14 01:58:48
+        ; tableCount = map:{
+            ; next = 3
+            ; previous = 2
+        }
+        ; diffAuthor = root
+        ; tableDiff = map:{
+            ; FOLLOWS = map:{
+                ; tableName = FOLLOWS
+                ; diffType = ADD
+            }
+            ; USERS = map:{
+                ; tableName = USERS
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; NAME = map:{
+                        ; columnName = NAME
+                        ; diffType = CHANGE
+                        ; columnSizeDiff = map:{
+                            ; next = 255
+                            ; previous = 20
+                        }
+                    }
+                }
+            }
+        }
+    }
     ; 2020/05/13 09:17:43 = map:{
         ; diffDate = 2020/05/13 09:17:43
         ; diffAuthor = root
